@@ -25,6 +25,7 @@ main{
     width: 100%;
 }
 .containerIaGenerator{
+    padding: 0.2rem 0.5rem;
     width: 40rem;
     min-height: 20rem;
     background-color: var(--light);
@@ -40,7 +41,6 @@ main{
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    padding: 0.1rem 0.5rem;
     min-height: 10%;
 }
 .tittleHeader{
@@ -76,22 +76,49 @@ main{
 }
 .messageUserDiv{
     width: 100%;
-    padding: 0.5rem;
+    height: 10rem;
+    background-color: var(--light-background);
+    border-radius: 0.5rem;
+    display: flex;
+    
+   
 }
 .messageUserDiv textarea{
-    width: 100%;
-    height: 10rem;
+    width: 90%;
+    height: 100%;
     border-radius: 0.5rem;
     border: none;
     padding: 0.5rem;
     outline: none;
-    background-color: var(--light-background);
+    resize: none;
+  background-color: transparent;
+}
+.button-dice{
+    width: 10%;
+    display: flex;
+    padding: 0.3rem;
+    justify-content: center;
+    align-items: end;
+}
+.messageUserDiv button{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--light-details);
+    color: var(--light);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+
+}
+.messageUserDiv button:hover{
+    background-color: var(--dark);
 }
 .buttonsGenerator{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0.5rem;
+  
 }
 .selectorsGenerator{
     display: flex;
@@ -119,5 +146,66 @@ main{
     transition: 0.4s ease-in;
 }
 .buttonGenerator button:hover{
-    background-color: var(--dark);
+    background-color: #157a6ecf;
+}
+.container-images{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 0.5rem;
+}
+.images{
+    background-color: lightslategray;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    height: 8rem;
+    width: fit-content;
+    
+}
+.images img{
+    width: 100%;
+    height: 100%;
+}
+@media (max-width:700px){
+    .container-images{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .containerIaGenerator{
+        width: 30rem;
+    }
+    .headerGenerator h1{
+        font-size: 1.5rem;
+    }
+    .buttonsGenerator{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .selectorsGenerator{
+        width: 100%;
+    }
+}
+@media (max-width:500px){
+     .container-images{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .images{
+        height: 7rem;
+    }
+    .containerIaGenerator{
+        width: 20rem;
+    }
+    .selectorsGenerator{
+        flex-wrap: wrap;
+       gap: 0.5rem;
+       justify-content: left;
+    }
+    .headerGenerator h1{
+        font-size: 1.2rem;
+    }
+    .messageUserDiv textarea{
+        width: 80%;
+    }
+    .button-dice{
+        width: 20%;
+        justify-content: end;
+    }
 }
