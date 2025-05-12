@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root{
+    --light-background: #B9F3ED;
+    --light-details:#157A6E;
+    --light: #F7FFF7;
+    --dark-background: #062320;
+    --dark:#0C4540;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--light-background);
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+.containerIaGenerator{
+    width: 40rem;
+    min-height: 20rem;
+    background-color: var(--light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+.headerGenerator{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.1rem 0.5rem;
+    min-height: 10%;
+}
+.tittleHeader{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.logoGenerate{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-details);
+    color: var(--light);
+    border-radius: 0.4rem;
+}
+.colorMode{
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--light-background);
+    color: var(--dark);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.colorMode:hover{
+    background-color: var(--light-details);
+    color: var(--light-background);
+}
+.messageUserDiv{
+    width: 100%;
+    padding: 0.5rem;
+}
+.messageUserDiv textarea{
+    width: 100%;
+    height: 10rem;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem;
+    outline: none;
+    background-color: var(--light-background);
+}
+.buttonsGenerator{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem;
+}
+.selectorsGenerator{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+.selectorsGenerator select{
+    height: 2rem;
+    border-radius: 0.3rem;
+    border: none;
+    cursor: pointer;
+    background-color: var(--light-background);
+}
+.selectorsGenerator option{
+    background-color: #fff;
+}
+.buttonGenerator button{
+    background-color: var(--light-details);
+    color: var(--light);
+    width: 6rem;
+    height: 2rem;
+    border-radius: 0.3rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s ease-in;
+}
+.buttonGenerator button:hover{
+    background-color: var(--dark);
+}
