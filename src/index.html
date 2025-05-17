@@ -19,44 +19,45 @@
                 <button class="colorMode"><i class="fa-regular fa-moon"></i></button>
             </div>
             <div class="messageUserDiv">
-                <textarea name="messageUser" id="messageUser" placeholder="Descreva a imagem que você quer com detalhes"></textarea>
-                <div class="button-dice"><button><i class="fa-solid fa-dice"></i></button></div>
+                <textarea name="messageUser" id="messageUser" required placeholder="Descreva a imagem que você quer com detalhes"></textarea>
+                <div class="button-dice"><button id="promptBtn"><i class="fa-solid fa-dice"></i></button></div>
             </div>
             <div class="buttonsGenerator">
                 <div class="selectorsGenerator">
-                    <select name="model" id="model">
+                    <select name="model" id="modelSelect" required>
                         <option disabled selected>Selecione modelo</option>
-                        <option value="fluxDev">FLUX.1-dev</option>
-                        <option value="fluxSchnell">FLUX.1-schnell</option>
-                        <option value="sdXL">Stable Diffusion XL</option>
-                        <option value="sdV15">Stable Diffusion v1.5</option>
-                        <option value="sd3">Stable Diffusion 3</option>
-                        <option value="">Openjourney</option>
+                        <option value="black-forest-labs/FLUX.1-dev">FLUX.1-dev</option>
+                        <option value="black-forest-labs/FLUX.1-schnell">FLUX.1-schnell</option>
+                        <option value="stabilityai/stable-diffusion-xl-base-1.0
+">Stable Diffusion XL</option>
+                        <option value="stabilityai/stable-diffusion-3.5-large">stable-diffusion-3.5-large</option>
+                      
+                       
                     </select>
-                    <select name="countImage" id="countImage">
+                    <select name="countImage" id="countSelect">
                         <option disabled selected>Quantas Imagem</option>
                         <option value="1">1 Imagem</option>
                         <option value="2">2 Imagem</option>
                         <option value="3">3 Imagem</option>
                         <option value="4">4 Imagem</option>
                     </select>
-                    <select name="" id="aspectRatio">
+                    <select name="" id="ratioSelect">
                         <option disabled selected>Proporção</option>
-                        <option value="square">Quadrado (1:1)</option>
-                        <option value="landscape">Paisagem (16:9)</option>
-                        <option value="portrait">Retrato (9:16)</option>
+                        <option value="1/1">Quadrado (1:1)</option>
+                        <option value="16/9">Paisagem (16:9)</option>
+                        <option value="9/16">Retrato (9:16)</option>
                     </select>
                 </div>
                 <div class="buttonGenerator">
-                    <button><i class="fa-solid fa-wand-sparkles"></i> Gerar</button>
+                    <button id="generateBtn" ><i class="fa-solid fa-wand-sparkles"></i> Gerar</button>
                 </div>
             </div>
             <div class="container-images">
+             
               
             </div>
-        </div>
     </main>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
